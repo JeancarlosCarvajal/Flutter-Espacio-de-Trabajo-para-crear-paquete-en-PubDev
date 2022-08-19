@@ -49,6 +49,7 @@ class RouteTransition {
   }
 
   void _fadeInTransition() {
+
     final route = PageRouteBuilder(
       pageBuilder: ( _ , __ , ___ ) => child,
       transitionDuration: duration,
@@ -60,13 +61,12 @@ class RouteTransition {
           child: child
         );
       }
-    );
+    ); 
     
     // verifica que sea replacement o no
     replacement 
       ? _pushReplacementPage(route)
       : _pushPage(route);
-
 
   }
 

@@ -28,8 +28,8 @@ class Page1 extends StatelessWidget {
             RouteTransition(
               context: context,
               child: const Page2(),
-              // animation: AnimationType.fadeIn,
-              // duration: const Duration(milliseconds: 500),
+              animation: AnimationType.fadeIn,
+              duration: const Duration(milliseconds: 500),
               // replacement: true
             );
 

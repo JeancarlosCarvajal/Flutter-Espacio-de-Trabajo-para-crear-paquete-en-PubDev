@@ -25,7 +25,7 @@ class Page1 extends StatelessWidget {
             // Navigator.pushNamed(context, 'page2'); 
 
             // usando la clase creada para la transicion
-            RouteTransition(
+            RouteTransitions(
               context: context,
               child: const Page2(),
               animation: AnimationType.fadeIn,

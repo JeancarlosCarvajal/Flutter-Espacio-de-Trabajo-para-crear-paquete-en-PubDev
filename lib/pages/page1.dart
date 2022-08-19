@@ -1,5 +1,6 @@
-import 'package:crear_paquetes/pages/page2.dart';
 import 'package:flutter/material.dart';
+import 'package:crear_paquetes/helpers/helpers.dart';
+import 'package:crear_paquetes/pages/page2.dart';
 
 class Page1 extends StatelessWidget {
    
@@ -10,24 +11,31 @@ class Page1 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text( 'Page1' ),
+        title: const Text( 'Page1' ),
         backgroundColor: Colors.transparent,
       ),
       backgroundColor: Colors.blue,
       body: Center(
          child: MaterialButton(
-          child: Text( 'Route to Page2' ),
           color: Colors.white,
           onPressed: (){
-            // opcion 1
+            // opcion 1. cambiar de pagina
             // Navigator.push(context, MaterialPageRoute(builder: (_) => Page2()));
-            // opcion 2
-            // Navigator.pushNamed(context, 'page2');
+            // opcion 2. cambiar de pagina, sin retroceso
+            // Navigator.pushNamed(context, 'page2'); 
 
-            // navegar con un fadein
-            // Navigator.push(context, PageRouteBuilder(pageBuilder: ((context, animation, secondaryAnimation) => Page2())));
-          
-          } 
+            // usando la clase creada para la transicion
+            RouteTransition(
+              context: context,
+              child: const Page2(),
+              // animation: AnimationType.fadeIn,
+              // duration: const Duration(milliseconds: 500),
+              // replacement: true
+            );
+
+
+          },
+          child: const Text( 'Route to Page2' ) 
         ),
       ),
     );

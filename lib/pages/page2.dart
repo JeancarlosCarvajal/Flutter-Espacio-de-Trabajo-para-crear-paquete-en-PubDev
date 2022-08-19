@@ -14,7 +14,7 @@ class Page2 extends StatelessWidget {
       ),
       backgroundColor: Colors.blueGrey,
       body: Center(
-         child: Text('Page1'),
+         child: Text('Page2'),
       ),
     );
   }

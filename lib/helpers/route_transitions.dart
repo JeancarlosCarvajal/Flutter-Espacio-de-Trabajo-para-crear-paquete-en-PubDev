@@ -6,14 +6,14 @@ enum AnimationType {
   fadeIn
 } 
 
-class RouteTransitions {
+class RouteTransitionsEasy {
   final BuildContext context;
   final Widget child;
   final Duration duration;
   final AnimationType animation;
   final bool replacement;
 
-  RouteTransitions({
+  RouteTransitionsEasy({
     required this.context, 
     required this.child,
     duration, 
